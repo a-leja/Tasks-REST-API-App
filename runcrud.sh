@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export CATALINA_HOME=Users/anna/Desktop/apache-tomcat-9.0.20/webapps
+export CATALINA_HOME=/Users/anna/Desktop/apache-tomcat-9.0.20
 
 stop_tomcat()
 {
@@ -15,7 +15,7 @@ start_tomcat()
 
 rename() {
   rm build/libs/crud.war
-  if mv build/libs/kodilla-tasks-new-version-0.0.1-SNAPSHOT.war build/libs/crud.war; then
+  if mv build/libs/tasksManager-0.0.1-SNAPSHOT.war build/libs/crud.war; then
      echo "Successfully renamed file"
   else
      echo "Cannot rename file"
