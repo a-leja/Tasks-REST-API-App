@@ -1,7 +1,6 @@
-package com.crud.tasksManager.com.crud.tasks.trello.client;
+package com.crud.tasksManager.trello.client;
 
 import com.crud.tasksManager.domain.TrelloBoardDto;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
