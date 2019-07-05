@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-//http://localhost:8080/v1/trello/getTrelloBoards
-
-
 @RestController
 @RequestMapping("/v1/trello")
 public class TrelloController {
