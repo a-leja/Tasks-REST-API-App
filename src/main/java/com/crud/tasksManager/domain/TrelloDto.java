@@ -1,16 +1,19 @@
 package com.crud.tasksManager.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Getter
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class AttachmentsByType {
+@JsonIgnoreProperties("ignoreUnknown = true")
+public class TrelloDto {
 
-    @JsonProperty("trello")
-    private Trello trello;
+    @JsonProperty("board")
+    private int board;
+
+    @JsonProperty("card")
+    private int card;
 }
