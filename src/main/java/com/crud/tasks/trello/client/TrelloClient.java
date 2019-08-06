@@ -39,12 +39,12 @@ public class TrelloClient {
                 .queryParam("lists", "all").build().encode().toUri();
     }
 
-
     public List<TrelloBoardDto> getTrelloBoards() {
 
         URI url = getTrelloBoardsUri();
 
-        try {TrelloBoardDto[] boardsResponse = restTemplate.getForObject(url, TrelloBoardDto[].class);
+        try {
+            TrelloBoardDto[] boardsResponse = restTemplate.getForObject(url, TrelloBoardDto[].class);
             return Arrays.asList(Optional.ofNullable(boardsResponse).orElse(new TrelloBoardDto[0]));
         } catch (RestClientException e) {
             LOGGER.error(e.getMessage(), e);

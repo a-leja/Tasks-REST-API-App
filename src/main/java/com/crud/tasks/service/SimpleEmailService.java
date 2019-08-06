@@ -27,11 +27,11 @@ public class SimpleEmailService {
         }
     }
 
-    private SimpleMailMessage createMailMessage(Mail mail) {
+    private SimpleMailMessage createMailMessage(final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
-//        mailMessage.setTo(receiverEmail);
-//        mailMessage.setSubject(subject);
-//        mailMessage.setText(message);
+        mailMessage.setTo(mail.getMailTo());
+        mailMessage.setSubject(mail.getSubject());
+        mailMessage.setText(mail.getMessage());
         return mailMessage;
     }
 }
