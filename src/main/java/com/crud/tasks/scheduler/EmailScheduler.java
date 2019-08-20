@@ -24,7 +24,7 @@ public class EmailScheduler {
     private void sendInformationEmail() {
         long size = taskRepository.count();
         String singularOrPlural = size == 1 ? " task" : "tasks";
-        simpleEmailService.send(new Mail(adminConfig.getAdminMail(), SUBJECT, "Currently in the database you've got: " + size + " tasks"));
+        simpleEmailService.send(new Mail(adminConfig.getAdminMail(), SUBJECT, "Currently in the database you've got: " + size + singularOrPlural));
     };
 
     private static final String SUBJECT = "Tasks: Once a day email";
