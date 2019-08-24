@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0607d0387154fe4db63c74f958fd072a6eb75dc5
 //package com.crud.tasks.trello.client;
 //
 //import com.crud.tasks.domain.CreatedTrelloCard;
@@ -103,8 +106,11 @@
 //    }
 //}
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f14a29... add Thymeleaf
+=======
+>>>>>>> 0607d0387154fe4db63c74f958fd072a6eb75dc5
 package com.crud.tasks.trello.client;
 
 import com.crud.tasks.domain.CreatedTrelloCard;
@@ -199,10 +205,14 @@ public class TrelloClientTest {
         URI uri = new URI("http://test.com/members/alcourse/boards?key=test&token=test&fields=name,id&lists=all");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         when(restTemplate.getForObject(uri, TrelloBoardDto[].class)).thenReturn(trelloBoards);
 =======
         when(restTemplate.getForObject(uri, TrelloBoardDto.class)).thenReturn(null);
 >>>>>>> parent of 1f14a29... add Thymeleaf
+=======
+        when(restTemplate.getForObject(uri, TrelloBoardDto[].class)).thenReturn(trelloBoards);
+>>>>>>> 0607d0387154fe4db63c74f958fd072a6eb75dc5
 
         //When
         List<TrelloBoardDto> fetchedTrelloBoards = trelloClient.getTrelloBoards();
@@ -211,8 +221,13 @@ public class TrelloClientTest {
         assertEquals(0, fetchedTrelloBoards.size());
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> parent of fa1d84c... refactor getForObject method
 =======
 }
 >>>>>>> parent of 1f14a29... add Thymeleaf
+=======
+}
+>>>>>>> parent of fa1d84c... refactor getForObject method
+>>>>>>> 0607d0387154fe4db63c74f958fd072a6eb75dc5
