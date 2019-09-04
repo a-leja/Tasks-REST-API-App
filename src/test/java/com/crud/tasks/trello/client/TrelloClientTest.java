@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.when;
 
 
@@ -92,7 +93,7 @@ public class TrelloClientTest {
 
         URI uri = new URI("http://test.com/members/alcourse/boards?key=test&token=test&fields=name,id&lists=all");
 
-        when(restTemplate.getForObject(uri, TrelloBoardDto.class)).thenReturn(null);
+        lenient().when(restTemplate.getForObject(uri, TrelloBoardDto.class)).thenReturn(null);
 
         //When
         List<TrelloBoardDto> fetchedTrelloBoards = trelloClient.getTrelloBoards();
