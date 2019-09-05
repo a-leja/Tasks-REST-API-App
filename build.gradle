@@ -28,5 +28,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.projectlombok:lombok')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('com.google.code.gson:gson:2.8.2')
 }
 
