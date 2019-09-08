@@ -9,7 +9,7 @@ public class StaticWebPageController {
 
     @RequestMapping("/")
     public String index(Map<String, Object> model) {
-        model.put("title", "TasksManager");
+        model.put("techStack", "Tech Stack used: ");
         return "index";
     }
 }

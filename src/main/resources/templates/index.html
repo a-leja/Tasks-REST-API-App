@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title> My welcome page</title>
+    <title>TasksManager</title>
 </head>
-<body style="background: white"; text=black >
-<h1>Welcome! That's just a first impression of my page.</h1>
+<body style="background: white", text="black">
+<h1> Welcome! That's just a first impression of my page.</h1>
 <h3> TasksManager is a simple CRUD application that uses REST API to communicate with Trello.
     <br>
     <br>
@@ -14,7 +14,7 @@
     <br>
     <br>
     <br>
-    Tech stack used:
+    <span th:text="${techStack}"></span>
 </h3>
 <h4>
     <ul>
@@ -24,10 +24,9 @@
         <li>Thymeleaf</li><br>
         <li>Swagger</li><br>
         <li>Integration tests - Mockito, JUnit</li>
-    </ul>>
+    </ul>
 </h4>
 <!--/*@thymesVar id="variable" type="com.crud.tasks.controller.StaticWebPageController"*/-->
-<span th:text="${title}"></span>
 <br>
 <!--/*@thymesVar id="two" type="com.crud.tasks.controller.StaticWebPageController"*/-->
 <!--<p>2 * 2 = <span th:text="${two} * ${two}"></span></p>-->
