@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <title> My welcome page</title>
 </head>
-<body>
-<h1>First impression of my page</h1>
-
+<body style="background: white"; text=black >
+<h1>Welcome! That's just a first impression of my page.</h1>
+<h3> TasksManager is a simple CRUD application that uses REST API to communicate with Trello.
+    <br>
+    <br>
+    In order to try the app out, please visit GitHub Pages using the following address: https://a-leja.github.io
+    <br>
+    <br>
+    <br>
+    <br>
+    Tech stack used:
+</h3>
+<h4>
+    <ul>
+        <li>REST API</li><br>
+        <li>Spring</li><br>
+        <li>Hibernate</li><br>
+        <li>Thymeleaf</li><br>
+        <li>Swagger</li><br>
+        <li>Integration tests - Mockito, JUnit</li>
+    </ul>>
+</h4>
 <!--/*@thymesVar id="variable" type="com.crud.tasks.controller.StaticWebPageController"*/-->
-<span th:text="${variable}"></span>
-
+<span th:text="${title}"></span>
 <br>
-
 <!--/*@thymesVar id="two" type="com.crud.tasks.controller.StaticWebPageController"*/-->
-<p>2 * 2 = <span th:text="${two} * ${two}"></span></p>
-<p>2 * 2 + 2 = <span th:text="(${two} * ${two}) + ${two}"></span></p>
-<p>2 - 2 * 2 = <span th:text="${two} - (${two} * ${two})"></span></p>
+<!--<p>2 * 2 = <span th:text="${two} * ${two}"></span></p>-->
+<!--<p>2 * 2 + 2 = <span th:text="(${two} * ${two}) + ${two}"></span></p>-->
+<!--<p>2 - 2 * 2 = <span th:text="${two} - (${two} * ${two})"></span></p>-->
 </body>
 </html>
