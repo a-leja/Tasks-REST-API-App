@@ -9,7 +9,6 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 @Slf4j
@@ -54,7 +53,16 @@ public class SimpleEmailService {
         };
     }
 
-    private SimpleMailMessage createMailMessage(final Mail mail) {
+    private MimeMessagePreparator createScheduledMessage(final Mail mail) {
+        return mimeMessage -> {
+            MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
+            messageHelper.setTo(mail.getMailTo());
+            messageHelper.setSubject(mail.getSubject());
+            messageHelper.setText(mailCreatorService.buildDailyUpdateEmail(mail.getMessage()), true);
+        };
+    }
+
+        private SimpleMailMessage createMailMessage(final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
         Optional.ofNullable(mail.getToCc()).ifPresent(mailMessage::setCc);
