@@ -1,6 +1,6 @@
-### TasksManager
+### Tasks
 
-TasksManager is a simple CRUD application that uses REST API to communicate with Trello.
+Tasks Application is a simple CRUD application that uses REST API to communicate with Trello.
  
  Tech stack used: 
   * REST API
